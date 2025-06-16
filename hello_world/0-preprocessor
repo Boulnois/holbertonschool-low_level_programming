@@ -1,0 +1,7 @@
+#include <stdio.h>
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89
+int main(void)
+{
+    return (0);
+}
+export CFILE=main.c
