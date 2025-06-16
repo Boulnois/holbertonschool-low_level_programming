@@ -1,2 +1,15 @@
 #!/bin/bash
-[ -z "$CFILE" ] && echo "Erreur: La variable \$CFILE n'est pas définie." && exit 1; [ ! -f "$CFILE" ] && echo "Erreur: Le fichier C '$CFILE' n'existe pas." && exit 1; gcc -S "$CFILE" -o "${CFILE%.c}.s" && echo "Code assembleur généré avec succès dans '${CFILE%.c}.s'." || echo "Erreur lors de la génération du code assembleur. Vérifiez les erreurs de compilation dans '$CFILE'."
+# Vérification de la variable CFILE
+if [ -z "$CFILE" ]; then
+    echo "Error: CFILE is not set."
+    exit 1
+fi
+
+# Vérification de l'existence du fichier
+if [ ! -f "$CFILE" ]; then
+    echo "Error: $CFILE does not exist."
+    exit 1
+fi
+
+# Génération du code d'assemblage
+gcc -S "$CFILE" && echo "Assembly code generated as ${CFILE%.c}.s" || echo "Failed to generate assembly code."
