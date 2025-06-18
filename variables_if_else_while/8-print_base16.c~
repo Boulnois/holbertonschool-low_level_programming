@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+/**
+ * main - Prints the alphabet in lowercase
+ * Print all the letters except q and e.
+ *
+ * Return: Always 0.
+ */
+
+int main(void)
+
+{
+int letter = 0;
+
+for (letter = 122; letter >= 97; letter--)
+{
+putchar(letter);
+}
+putchar('\n');
+
+return (0);
+
+}
