@@ -1,0 +1,1 @@
+Exercise on C - Functions, nested loops
