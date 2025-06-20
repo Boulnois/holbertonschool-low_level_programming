@@ -4,9 +4,8 @@
  * print_alphabet - Entry point
  * write the the lower-case alphabet on a line
  *
- * Return: On success 1. 
+ * Return: On success 1
 */
-
 
 void print_alphabet(void)
 
