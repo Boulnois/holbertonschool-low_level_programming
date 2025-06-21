@@ -1,11 +1,10 @@
 #include "main.h"
 
 /**
-  * _islower - a function that checks for lowercase character
-  *
-  * @c: is a letter, lowercase or uppercase
-  *
-  * Return: On 0 or 1
+ * _isalpha - Checks if input character is alphacharacter
+ * @c: arg to be checked
+ *
+ * Return: 1 for alpha, 0 for non-alpha
  */
 
 int _isalpha(int c)
