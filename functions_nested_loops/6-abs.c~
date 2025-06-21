@@ -1,0 +1,16 @@
+#include "main.h"
+#include <stdio.h>
+
+int _abs(int);
+{
+    int value;
+    int absoluteValue;
+
+    scanf( "%d", &value );
+
+    absoluteValue = abs( value );
+
+    printf( "%d.\n", value, absoluteValue );
+
+    return EXIT_SUCCESS;
+}
