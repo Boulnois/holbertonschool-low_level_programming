@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * main - Entry point
+ *
+ * Return: always 0 (sucess)
+ */
+
+int main(void)
+{
+	int n;
+	n = 0;
+	for (n = 0 ; n < 100 ; n++)
+	{
+		if ((n % 3) != 0 && (n % 5) != 0)
+		{
+			printf("%d", n);
+		}
+		else if ((n % 3) == 0 && (n % 5) != 0)
+		{
+			printf("Fizz");
+		}
+		else if ((n % 3) != 0 && (n % 5) == 0)
+		{
+			printf("Buzz");
+		}
+		else
+		{
+			printf("FizzBuzz");
+		}
+		if (n < 100);
+		{
+			yputchar(' ');
+		}
+	}
+	putchar('\n');
+	return (0);
+}
