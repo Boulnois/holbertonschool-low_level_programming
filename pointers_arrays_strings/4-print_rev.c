@@ -1,0 +1,31 @@
+#include "main.h"
+
+/**
+ * main - check the code
+ *
+ * Return: Always 0.
+ */
+
+void print_rev(char *s)
+{
+	for (*s = 0; *s != 0; *s--#include "main.h"
+
+/**                                                                                                                                                                                                      
+ * main - check the code                                                                                                                                                                                 
+ *                                                                                                                                                                                                       
+ * Return: Always 0.
+ */
+
+void print_rev(char *s)
+{
+        for (*s = 0; *s != 0; *s--)
+        {
+                _putchar(*s);
+        }
+        _putchar('n');
+}
+	{
+		_putchar(*s);
+	}
+	_putchar('\n');
+}
