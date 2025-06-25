@@ -1,31 +1,24 @@
 #include "main.h"
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * print_rev - minic the stdio version of puts
+ * @s: the value to process to the stdout in reverse.
  */
 
 void print_rev(char *s)
 {
-	for (*s = 0; *s != 0; *s--#include "main.h"
+	int n = 0;
 
-/**                                                                                                                                                                                                      
- * main - check the code                                                                                                                                                                                 
- *                                                                                                                                                                                                       
- * Return: Always 0.
- */
-
-void print_rev(char *s)
-{
-        for (*s = 0; *s != 0; *s--)
-        {
-                _putchar(*s);
-        }
-        _putchar('n');
-}
+	while (*(s + n) != '\0')
 	{
-		_putchar(*s);
+		n++;
 	}
+
+	while (n > 0)
+	{
+		_putchar(*(s + n - 1));
+		n--;
+	}
+
 	_putchar('\n');
 }
