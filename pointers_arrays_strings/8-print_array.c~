@@ -1,0 +1,22 @@
+#include "main.h"
+
+void print_array(int *a, int n)
+{
+	int tableau[5], n = 0;
+
+    // Initialisation du tableau
+	for (n = 0 ; n < 5 ; n++)
+	{
+		tableau[n] = 0;
+	}
+
+    // Affichage de ses valeurs pour vérifier
+	for (n = 0 ; n < 4 ; n++)
+	{
+		printf("%d ,\n", tableau[n]);
+	}
+
+	return 0;
+}
+
+}
