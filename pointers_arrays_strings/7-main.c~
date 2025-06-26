@@ -1,0 +1,15 @@
+#include "main.h"
+
+/**
+ * puts_half - function description here
+ * @str: description of the parameter
+ */
+
+int main(void)
+{
+    char *str;
+
+    str = "0123456789";
+    puts_half(str);
+    return (0);
+}
