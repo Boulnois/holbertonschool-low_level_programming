@@ -2,7 +2,9 @@
 
 /**
  * puts_half - function description here
- * @str: description of the parameter
+ * @str: description of the paramete
+ *
+ * Return: Alwaysr
  */
 
 void puts_half(char *str)
@@ -17,8 +19,10 @@ void puts_half(char *str)
 	{
 		leng /= 2;
 	}
-	else leng = (leng + 1) / 2;
-
+	else
+	{
+	leng = (leng + 1) / 2;
+	}
 	while (*(str + leng) != 0)
 	{
 		_putchar(*(str + leng));
