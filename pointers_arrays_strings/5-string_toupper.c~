@@ -1,0 +1,16 @@
+#include "main.h"
+
+/**
+ * string_toupper - uppercase all lower case letters in a string.
+ * @s: string to process.
+ * Return: a pointer
+ */
+
+{
+	int i;
+
+       
+	}
+
+	return (s);
+}
