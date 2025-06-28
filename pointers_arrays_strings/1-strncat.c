@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- * _strcat - this fuction will concatenates two strings
+ * _strncat - this fuction will concatenates two strings
  * @dest: the string that will modified.
  * @src: the string that will be concatenated to @des.
  * @n: copy up to poistion 'n'
