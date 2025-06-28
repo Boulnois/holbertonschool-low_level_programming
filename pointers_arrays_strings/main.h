@@ -22,5 +22,6 @@ char *string_toupper(char *s);
 int is_sep(char s);
 char *cap_string(char *s);
 char *cap_string(char *);
+char *leet(char *s);
 
 #endif
