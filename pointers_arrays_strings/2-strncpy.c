@@ -1,0 +1,26 @@
+#include "main.h"
+#include <stdio.h>
+
+/**
+ * _strncpy - this fuction will concatenates two strings
+ * @dest: the string that will modified.
+ * @src: the string that will be concatenated to @des.
+ * @n: copy up to poistion 'n'
+ * Return: a pointer to @dest
+ */
+
+char *_strncpy(char *dest, char *src, int n)
+{
+	int boxOne = 0;
+
+	for (boxOne = 0; boxOne < n && src[boxOne] != '\0'; boxOne++)
+	{
+		dest[boxOne] = src[boxOne];
+	}
+	for (; boxOne < n ; boxOne++)
+	{
+		dest[boxOne] = '\0';
+	}
+
+	return (dest);
+}
