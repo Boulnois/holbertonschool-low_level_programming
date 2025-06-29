@@ -31,11 +31,11 @@ int _atoi(char *s)
 		}
 		else if (s[i] != '+')
 		{
-        		if (num_started)
+			if (num_started)
 			{
 				break;
-        		}
-		}
+			}
+}
 		i++;
 	}
 
