@@ -2,9 +2,8 @@
 
 /**
  * _atoi - convert a string to an integer
- * @s: number in the string can be preceded by an infinite number of characters
- * You need to take into account all the - and + signs before the number
- * Return: number and sign
+ * @s: string to be converted
+ * Return: the integer value of the string, or 0 if no numbers are found
  */
 
 int _atoi(char *s)
@@ -12,12 +11,7 @@ int _atoi(char *s)
 	int result = 0;
 	int sign = 1;
 	int i = 0;
-	int numFound = 0;
-
-	while (s[i] != '\0' && (s[i] < '0' || s[i] > '9') && s[i] != '-' && s[i] != '+')
-	{
-		i++;
-	}
+	int num_started = 0;
 
 	while (s[i] != '\0')
 	{
@@ -27,15 +21,22 @@ int _atoi(char *s)
 		}
 		else if (s[i] >= '0' && s[i] <= '9')
 		{
-			numFound = 1;
-			result = result * 10 + (s[i] - '0');
-		}
-		else
-		{
+			num_started = 1;
+			while (s[i] >= '0' && s[i] <= '9')
+			{
+				result = result * 10 + (s[i] - '0');
+				i++;
+			}
 			break;
 		}
+		else if (s[i] != '+')
+		{
+			 if (num_started)
+			 {
+				 break;
+			 }
 		i++;
-	}
+		}
 
-	return (numFound ? result * sign : 0);
+	return (result * sign);
 }
