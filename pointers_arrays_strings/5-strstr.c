@@ -13,34 +13,21 @@
 char *_strstr(char *haystack, char *needle)
 {
 	unsigned int count;
-	unsigned int haystack_len = strlen(haystack);
-	unsigned int needle_len = strlen(needle);
 
 	if (haystack == NULL || needle == NULL)
 	{
 		return (NULL);
 	}
 
-	if (needle_len == 0)
-	{
-		return (haystack);
-	}
-
 	for (; haystack[0]; haystack++)
 	{
-		if (haystack_len < needle_len)
-		{
-			return (NULL);
-}
 		for (count = 0; haystack[count] == needle[count]; count++)
 		{
-			if (count == needle_len - 1)
-			{
-				return (haystack);
-			}
+			if (!(needle[count]))
+			return (haystack);
 		}
-
 	}
-	return (NULL);
+
+	return (0);
 }
 
