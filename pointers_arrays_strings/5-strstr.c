@@ -14,11 +14,6 @@ char *_strstr(char *haystack, char *needle)
 {
 	unsigned int count;
 
-	if (haystack == NULL || needle == NULL)
-	{
-		return (NULL);
-	}
-
 	for (; haystack[0]; haystack++)
 	{
 		for (count = 0; haystack[count] == needle[count]; count++)
@@ -30,4 +25,3 @@ char *_strstr(char *haystack, char *needle)
 
 	return (0);
 }
-
