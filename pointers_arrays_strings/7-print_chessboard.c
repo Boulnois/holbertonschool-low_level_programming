@@ -4,9 +4,9 @@
 #include <string.h>
 
 /**
- * print_chessboard - function that prints the chessboard
- * @char (*a)[8]: tableau
- * Return: chessboard
+ * print_chessboard - prints 2D array of chessboard
+ * @a: chessboard array
+ * Return: void
  */
 
 void print_chessboard(char (*a)[8])
@@ -18,7 +18,7 @@ void print_chessboard(char (*a)[8])
 	{
 		for (countColumns = 0; countColumns < 8; countColumns++)
 		{
-			_putchar(a [countRows][countColumns]);
+			_putchar(a[countRows][countColumns]);
 		}
 		_putchar('\n');
 	}
