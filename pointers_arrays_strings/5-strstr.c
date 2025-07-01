@@ -12,16 +12,25 @@
 
 char *_strstr(char *haystack, char *needle)
 {
-	unsigned int count;
-
-	for (; haystack[0]; haystack++)
+	if (*needle == '\0')
 	{
-		for (count = 0; haystack[count] == needle[count]; count++)
-		{
-			if (!(needle[count]))
-			return (haystack);
-		}
+		return (haystack);
 	}
+	while (*haystack != '\0')
+	{
+	char *h = haystack;
+	char *n = needle;
 
-	return (0);
+		while (*n != '\0' && *h == *n)
+		{
+			h++;
+			n++;
+		}
+		if (*n == '\0')
+		{
+		return (haystack);
+		}
+	haystack++;
+	}
+	return (NULL);
 }
