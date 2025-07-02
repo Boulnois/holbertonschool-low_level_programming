@@ -24,9 +24,10 @@ int finder_sqrt(int num, int root)
 
 /**
  * _sqrt_recursion - Returns the natural square root of a number.
- * @n: Number to return the square root.
- * @root: Tfe root to be tested.
- * Return: if n has a spuare roo≈t
+ * @n: The number to return the square root of.
+ *
+ * Return: If n has a natural square root - the natural square root of n.
+ *         If n does not have a natural square root - -1.
  */
 
 int _sqrt_recursion(int n)
