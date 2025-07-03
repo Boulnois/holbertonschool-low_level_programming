@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
@@ -14,23 +13,30 @@
 
 int main(int argc, char *argv[])
 {
-	int index;
 	int i;
+	int b;
 	int sum = 0;
 
-	for (index = 1; index < argc; index++)
+	if (argc < 1)
 	{
-		sum += atoi(argv[index]);
+		printf("0\n");
 	}
 
-	for (i = 0; argv[index][i] != '\0'; i++)
+	for (i = 1; i < argc; i++)
 	{
-		if (! isdigit(argv[index][i]))
+		sum += atoi(argv[i]);
+
+		for (b = 0; argv[i][b] != '\0'; b++)
 		{
-			printf("Error\n");
-			return (0);
+			if (!(isdigit(argv[i][b])))
+			{
+				printf("Error\n");
+
+				return (0);
+			}
 		}
-		printf ("%d\n", sum);
 	}
+	printf("%d\n", sum);
+
 	return (0);
 }
