@@ -3,38 +3,41 @@
 #include <stdlib.h>
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * _strdup - copy of the string given as a parameter.
+ * @str: unsigned int
+ * Return: char pointer
  */
 
 char *_strdup(char *str)
 {
-	int i;
-	char *s;
-	i = 0;
-	if (str == 0)
-        {
-                return (NULL);
+	unsigned int length, counterTwo;
+	char *strCopy;
+
+	length = 0;
+	counterTwo = 0;
+
+	if (str == NULL)
+	{
+		return (0);
 	}
 
-	while (*(str + i) != '\0')
+	while (str[length] != '\0')
 	{
-		i++;
+		length++;
 	}
 
-	i = 0;
-	while (*(str + i) != '\0')
+	strCopy = malloc(sizeof(char) * (length + 1));
+
+	if (strCopy == NULL)
 	{
-		*(s + i) = *(str + i);
-		i++;
+		return (NULL);
 	}
-	s = malloc(sizeof(char) * (i + 1));
-	free(s);
-	if (s == 0)
-        {
-                return (NULL);
-        }
-	*(s + i) = '\0';
-	return (s);
+
+	while (counterTwo < length)
+	{
+		strCopy[counterTwo] = str[counterTwo];
+		counterTwo++;
+	}
+	strCopy[counterTwo] = '\0';
+	return (strCopy);
 }
