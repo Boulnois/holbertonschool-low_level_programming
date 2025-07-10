@@ -1,22 +1,17 @@
 #ifndef DOG_H
 #define DOG_H
-
 /**
- * struct dog - Represents a dog
- * @name: A pointer to a character string representing the dog's name.
- * @age: A floating-point number representing the dog's age.
- * @owner: A pointer to a character string representing the owner's name.
- *
- * This structure defines a dog with attributes such as its name, age,
- * and the name of its owner. A new type, dog_t, is created to help
- * simplify references to the struct dog.
- */
-
-typedef struct dog
+ * struct dog - new type struct dog with elements
+ *@name: name is the type char
+ *@age: age is the type float
+ *@owner: owner is the type char
+ * Return:  new type struct dog
+*/
+struct dog
 {
-	char *name;
-	float age;
-	char *owner;
-} dog_t;
+        char *name;
+        float age;
+        char *owner;
+};void init_dog(struct dog *d, char *name, float age, char *owner);
 
 #endif
