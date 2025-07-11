@@ -4,11 +4,12 @@
 #include <string.h>
 
 /**
- * calloc - can do witj malloc like calloc
- * @nmemb: elements of size bytes each and
- * @size: the size of the memory to print
+ * _calloc - Allocates memory for an array, using malloc.
+ * @nmemb: The number of elements to allocate.
+ * @size: The size of each element in bytes.
  *
- * Return: allocates memory for an array, using malloc
+ * Return: A pointer to the allocated memory, or NULL if nmemb or size is
+ * zero, or if malloc fails.
  */
 
 void *_calloc(unsigned int nmemb, unsigned int size)
@@ -29,4 +30,15 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 
 	memset(p, 0, total_size);
 	return (p);
+}
+/**
+ * array_range - Creates an array of integers from min to max.
+ * @min: The minimum value (inclusive) of the range.
+ * @max: The maximum value (inclusive) of the range.
+ *
+ * Return: A pointer to the newly created array.
+ *         If min > max, or if malloc fails, return NULL.
+ */
+int *array_range(int min, int max)
+{
 }
