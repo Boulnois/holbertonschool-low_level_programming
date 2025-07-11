@@ -29,6 +29,7 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	}
 
 	memset(p, 0, total_size);
+
 	return (p);
 }
 /**
@@ -49,6 +50,10 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
+		if (size <= 0)
+		{
+			return (NULL);
+		}
 
 	array = _calloc(size, sizeof(int));
 	if (array == NULL)
