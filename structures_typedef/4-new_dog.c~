@@ -1,0 +1,63 @@
+#include <stdio.h>
+#include "dog.h"
+#include <stddef.h>
+#include <stdlib.h>
+#include <string.h>
+/**
+ * print_dog - prints a struct dog
+ * @d: pointer
+ * Returns: prints the dog's name, age, and owner; if name or owner is NULL
+ */
+
+void free_dog(struct dog *d)
+{
+	if (d == NULL)
+	{
+		return;
+	}
+	free(d->name);
+	free(d->owner);
+	free(d);
+}
+
+dog_t *new_dog(char *name, float age, char *owner)
+{
+	dog_t *newdog;
+	char *name_copy, *owner_copy;
+
+	if (name == NULL || owner == NULL)
+	{
+		return NULL;
+	}
+
+	newdog = malloc(sizeof(dog_t));
+
+	if (newdog == NULL)
+	{
+		return (NULL);
+	}
+
+	name_copy = malloc(strlen(name) + 1);
+	if (name_copy == NULL)
+	{
+		free(newdog);
+		return (NULL);
+	}
+
+	strcpy(name_copy, name);
+
+	    owner_copy = malloc(strlen(owner) + 1);
+    if (owner_copy == NULL)
+    {
+        free(name_copy);
+        free(newdog);
+        return NULL;
+    }
+    strcpy(owner_copy, owner);
+
+    newdog->name = name_copy;
+    newdog->age = age;
+    newdog->owner = owner_copy;
+
+    return newdog;
+}
