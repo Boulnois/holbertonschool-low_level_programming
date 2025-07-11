@@ -15,6 +15,7 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	unsigned int total_size = nmemb * size;
+	unsigned int i;
 	char *p;
 
 	if (nmemb == 0 || size == 0)
@@ -27,8 +28,10 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	{
 		return (NULL);
 	}
-
-	memset(p, 0, total_size);
+	for (i = 0; i < total_size; i++)
+	{
+		p[i] = 0;
+	}
 
 	return (p);
 }
@@ -50,17 +53,13 @@ int *array_range(int min, int max)
 	{
 		return (NULL);
 	}
-		if (size <= 0)
-		{
-			return (NULL);
-		}
 
-	array = _calloc(size, sizeof(int));
+	array = malloc(sizeof(int) * size);
 	if (array == NULL)
 	{
 		return (NULL);
 	}
-	for (i = 0; i < size; ++i)
+	for (i = 0; i < size; i++)
 	{
 		array[i] = min + i;
 	}
