@@ -3,6 +3,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
+#include "main.h"
 
 /**
  * free_dog - frees a dog struct and its associated memory
