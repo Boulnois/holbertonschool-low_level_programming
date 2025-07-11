@@ -3,7 +3,6 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include <string.h>
-#include "main.h"
 
 /**
  * free_dog - frees a dog struct and its associated memory
@@ -14,7 +13,7 @@
  * This prevents memory leaks in the program when freeing dog
  */
 
-void free_dog(struct dog *d)
+void free_dog(dog_t *d)
 {
 	if (d == NULL)
 	{
@@ -31,15 +30,14 @@ void free_dog(struct dog *d)
  * @age: dog's age
  * @owner: owner's name
  *
- * Allocates memory for a new dog struct
- * initializes it with the given values
- * Returns a pointer to the new dog
- * or return NULL if allocation fails or inputs are invalid
+ * Return: pointer to the new dog_t, or NULL on failure
  */
+
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newdog;
-	char *name_copy, *owner_copy;
+	char *name_copy;
+	char *owner_copy;
 
 	if (name == NULL || owner == NULL)
 	{
@@ -47,7 +45,6 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	newdog = malloc(sizeof(dog_t));
-
 	if (newdog == NULL)
 	{
 		return (NULL);
@@ -59,13 +56,13 @@ dog_t *new_dog(char *name, float age, char *owner)
 		free(newdog);
 		return (NULL);
 	}
-
 	strcpy(name_copy, name);
+
 	owner_copy = malloc(strlen(owner) + 1);
 	if (owner_copy == NULL)
 	{
 		free(name_copy);
- 		free(newdog);
+		free(newdog);
 		return (NULL);
 	}
 	strcpy(owner_copy, owner);
