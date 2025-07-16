@@ -12,15 +12,23 @@ int main(int argc, char *argv[])
 	    printf("Error\n");
 	    exit(98);
     }
-    if (get_op_func(argv[2]) == NULL)
+    operation = get_op_func(argv[2]);
+    if (operation == NULL)
     {
 	    printf("Error\n");
 	    exit(99);
     }
-    if (get_op_func(argv[1]) == NULL && get_op_func(argv[3]) == NULL)
+
+    a = atoi(argv[1]);
+    b = atoi(argv[3]);
+
+
+    if ((argv[2][0] == '/' || argv[2][0] == '%') && b == 0)
     {
             printf("Error\n");
             exit(100);
     }
+    result = operation(a, b);
+    printf("%d\n", result);
     return (0);
 }
