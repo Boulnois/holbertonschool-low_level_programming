@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include "3-calc.h"
+#include <stdlib.h>
+
+int main(int argc, char *argv[])
+{
+	int a, b, result;
+	int (*operation)(int, int);
+
+	if (argc != 4)
+    {
+	    printf("Error\n");
+	    exit(98);
+    }
+    if (get_op_func(argv[2]) == NULL)
+    {
+	    printf("Error\n");
+	    exit(99);
+    }
+    if (get_op_func(argv[1]) == NULL && get_op_func(argv[3]) == NULL)
+    {
+            printf("Error\n");
+            exit(100);
+    }
+    return (0);
+}
