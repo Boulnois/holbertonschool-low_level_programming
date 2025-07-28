@@ -17,6 +17,6 @@ typedef struct list_s
 } list_t;
 
 size_t print_list(const list_t *h);
-int _str≈Ò≈©len(char *s);
+int _strlen(char *s);
 
 #endif
