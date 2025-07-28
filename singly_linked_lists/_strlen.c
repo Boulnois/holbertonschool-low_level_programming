@@ -1,4 +1,4 @@
-#include "main.h"
+#include "lists.h"
 
 /**
  * _strlen - Calcule la longueur d'une chaîne de caractères
