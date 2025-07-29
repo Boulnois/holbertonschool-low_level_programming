@@ -1,23 +1,31 @@
-#include <stdlib.h>
-#include <string.h>
-#include <stdio.h>
 #include "lists.h"
+#include <stdio.h>
 
 /**
- * list_len - Returns the number of elements in a linked list_t list
- * @h: Pointer to the head of the list
- *
- * Return: Number of elements (nodes) in the list
- */
+* list_len - Return number of elements
+*
+* @h: Points to struct
+*
+* Return: Num of elements
+*/
 
 size_t list_len(const list_t *h)
 {
-	int count = 0;
+	unsigned int index = 0;
+	const list_t *list;
 
-	while (h != NULL)
+	list = malloc(sizeof(list_t));
+
+	list = h;
+
+	if (list == NULL)
 	{
-		count++;
-		h = h->next;
+		return (0);
 	}
-	return (count);
+	while (list != NULL)
+	{
+		list = list->next;
+		index++;
+	}
+	return (index);
 }
