@@ -1,4 +1,4 @@
-≈©#include <stdlib.h>
+#include <stdlib.h>
 #include <string.h>
 #include <stdio.h>
 #include "lists.h"
@@ -10,14 +10,12 @@
  * Return: La longueur de la chaîne
 */
 
-int _strlen(char *s)
+int _strlen(const char *s)
 {
-	int chaine = 0;
+	int i = 0;
 
-	while (*(s + chaine) != '\0')
-	{
-	chaine++;
-	}
+	while (s[i])
+		i++;
 
-	return (chaine);
+	return (i);
 }

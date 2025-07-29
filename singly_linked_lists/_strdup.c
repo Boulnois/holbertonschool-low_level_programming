@@ -4,9 +4,10 @@
 #include "lists.h"
 
 /**
- * _strdup - copy of the string given as a parameter.
- * @str: unsigned int
- * Return: char pointer
+ * _strdup - creates a copy of the string given as a parameter
+ * @str: string to duplicate
+ *
+ * Return: pointer to the new string (malloc'ed), or NULL if it fails
  */
 
 char *_strdup(char *str)
