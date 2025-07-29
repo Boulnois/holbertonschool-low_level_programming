@@ -10,36 +10,23 @@
  * Return: pointer to the new string (malloc'ed), or NULL if it fails
  */
 
-char *_strdup(char *str)
+char *_strdup(const char *str)
 {
-	unsigned int length, counterTwo;
-	char *strCopy;
+    unsigned int length, i;
+    char *strCopy;
 
-	length = 0;
-	counterTwo = 0;
+    if (str == NULL)
+        return (NULL);
 
-	if (str == NULL)
-	{
-		return (0);
-	}
+    length = _strlen(str);
 
-	while (str[length] != '\0')
-	{
-		length++;
-	}
+    strCopy = malloc(sizeof(char) * (length + 1));
+    if (strCopy == NULL)
+        return (NULL);
 
-	strCopy = malloc(sizeof(char) * (length + 1));
+    for (i = 0; i < length; i++)
+        strCopy[i] = str[i];
 
-	if (strCopy == NULL)
-	{
-		return (NULL);
-	}
-
-	while (counterTwo < length)
-	{
-		strCopy[counterTwo] = str[counterTwo];
-		counterTwo++;
-	}
-	strCopy[counterTwo] = '\0';
-	return (strCopy);
+    strCopy[i] = '\0';
+    return (strCopy);
 }

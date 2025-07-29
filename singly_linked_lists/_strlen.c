@@ -12,10 +12,12 @@
 
 int _strlen(const char *s)
 {
-	int i = 0;
+	int chaine = 0;
 
-	while (s[i])
-		i++;
+	while (*(s + chaine) != '\0')
+	{
+	chaine++;
+	}
 
-	return (i);
+	return (chaine);
 }
