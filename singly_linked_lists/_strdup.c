@@ -12,21 +12,22 @@
 
 char *_strdup(const char *str)
 {
-    unsigned int length, i;
-    char *strCopy;
+	unsigned int length, i;
+	char *strCopy;
 
-    if (str == NULL)
-        return (NULL);
+	if (str == NULL)
+	return (NULL);
 
-    length = _strlen(str);
+	length = _strlen(str);
 
-    strCopy = malloc(sizeof(char) * (length + 1));
-    if (strCopy == NULL)
-        return (NULL);
+	strCopy = malloc(sizeof(char) * (length + 1));
 
-    for (i = 0; i < length; i++)
-        strCopy[i] = str[i];
+	if (strCopy == NULL)
+		return (NULL);
 
-    strCopy[i] = '\0';
-    return (strCopy);
+	for (i = 0; i < length; i++)
+		strCopy[i] = str[i];
+
+	strCopy[i] = '\0';
+	return (strCopy);
 }
