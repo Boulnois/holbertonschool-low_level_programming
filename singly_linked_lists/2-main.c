@@ -6,14 +6,13 @@
 /**
  * main - check the code
  *
- * Return: Always 0.
+ * Return: Always 0
  */
 int main(void)
 {
 	list_t *head;
 
 	head = NULL;
-
 	add_node(&head, "Alexandro");
 	add_node(&head, "Asaia");
 	add_node(&head, "Augustin");
@@ -43,8 +42,5 @@ int main(void)
 	add_node(&head, "William");
 	add_node(&head, "Zee");
 	print_list(head);
-
-	print_list(head);
-
 	return (0);
 }
