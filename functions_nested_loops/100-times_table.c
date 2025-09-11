@@ -30,7 +30,7 @@ void print_times_table(int n)
 {
 	int row, col, value;
 
-	if (n < 0 || n > 15 )
+	if (n < 0 || n > 15)
 	return;
 
 	for (row = 0; row <= n; row++)
