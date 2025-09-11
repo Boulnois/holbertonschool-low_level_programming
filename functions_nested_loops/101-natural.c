@@ -6,12 +6,8 @@
 */
 void print_number(int n)
 {
-	if (n >= 1000) /* just in case, though max sum < 1024*1024 */
-		_putchar((n / 1000) % 10 + '0');
-	if (n >= 100)
-		_putchar((n / 100) % 10 + '0');
-	if (n >= 10)
-		_putchar((n / 10) % 10 + '0');
+	if (n / 10)
+		print_number(n / 10);
 	_putchar(n % 10 + '0');
 }
 
