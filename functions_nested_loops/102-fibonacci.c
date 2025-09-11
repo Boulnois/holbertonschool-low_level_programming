@@ -2,9 +2,15 @@
 #include "main.h"
 
 /**
-* main - point d'entrée
-* Return: Always 0
-*/
+ * main - prints the first 50 Fibonacci numbers, starting with 1 and 2
+ *
+ * Description: The numbers are separated by a comma followed by a space.
+ *              The program uses a loop to generate the sequence and prints
+ *              it using printf. Each number is stored in unsigned long to
+ *              handle large values in the sequence.
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	unsigned long nbr_1 = 1;
