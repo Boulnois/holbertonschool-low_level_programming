@@ -25,7 +25,6 @@ int main(void)
 			if (next % 2 == 0)
 			{
 				sum = sum + next;
-
 			}
 			nbr_1 = nbr_2;
 			nbr_2 = next;
