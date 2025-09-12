@@ -6,7 +6,7 @@
  *
  * Return: Always 0.
  */
-int main (void)
+int main(void)
 {
 	long n = 612852475143;
 	long largest_factor = -1;
