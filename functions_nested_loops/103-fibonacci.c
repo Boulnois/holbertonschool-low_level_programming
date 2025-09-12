@@ -18,7 +18,7 @@ int main(void)
 	unsigned long sum = 2;
 	unsigned long next = 0;
 
-		while(next <= 4000000)
+		while (next <= 4000000)
 		{
 			next = nbr_1 + nbr_2;
 
