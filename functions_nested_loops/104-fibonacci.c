@@ -9,16 +9,14 @@
 int main(void)
 {
 	int i;
-
 	unsigned long nbr_1_low = 1, nbr_2_low = 2;
 	unsigned long nbr_1_high = 0, nbr_2_high = 0;
 	unsigned long next_low, next_high;
 	unsigned long billion = 1000000000;
 
-	printf("%lu, %lu", nbr_1_low, nbr_2_low);
+	printf("1, 2");
 
-
-for (i = 1; i <= 98; i++)
+	for (i = 1; i <= 98; i++)
 	{
 		next_low = nbr_1_low + nbr_2_low;
 		next_high = nbr_1_high + nbr_2_high;
