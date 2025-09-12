@@ -16,7 +16,7 @@ int main(void)
 
 	printf("1, 2");
 
-	for (i = 1; i <= 98; i++)
+	for (i = 3; i <= 98; i++)
 	{
 		next_low = nbr_1_low + nbr_2_low;
 		next_high = nbr_1_high + nbr_2_high;
