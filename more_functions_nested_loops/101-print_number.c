@@ -24,7 +24,8 @@ void print_number(int n)
 	{
 		num = n;
 	}
-	while (num / div >= 10) {
+	while (num / div >= 10)
+	{
 		div *= 10;
 	}
 	while (div > 0)
