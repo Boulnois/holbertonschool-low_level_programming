@@ -18,8 +18,7 @@ for (i = 1; i <= 98; i++)
 		{
 			printf(", ");
 		}
-
-		 next = nbr_1 + nbr_2;
+		next = nbr_1 + nbr_2;
 		nbr_1 = nbr_2;
 		nbr_2 = next;
 	}
