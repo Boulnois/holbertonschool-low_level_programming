@@ -45,7 +45,9 @@ void gen_password(char *buf, size_t len)
 	size_t i;
 
 	for (i = 0; i < len; i++)
+	{
 		buf[i] = rand_char_from_valid();
+	}
 	buf[len] = '\0';
 }
 
@@ -57,16 +59,15 @@ void gen_password(char *buf, size_t len)
 int main(void)
 {
 	char pass[PASS_LEN + 1];
-
 	size_t i;
 
 	srand((unsigned int)time(NULL));
-
 	gen_password(pass, PASS_LEN);
 
-	/* Print password using _putchar */
 	for (i = 0; i < PASS_LEN; i++)
+	{
 		_putchar(pass[i]);
+	}
 	_putchar('\n');
 
 	return (0);
