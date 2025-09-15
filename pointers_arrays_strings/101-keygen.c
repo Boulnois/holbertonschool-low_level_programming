@@ -15,13 +15,12 @@ int main(void)
 
 	/* initialize random seed with current time */
 	seed = (unsigned int)time(NULL);
-
 	srand(seed);
 
 	/* generate 16 random printable ASCII characters */
 	for (i = 0; i < 16; i++)
 	{
-		pass[i] = 33 + (rand() % 94); /* ASCII from '!' to '~' */
+		pass[i] = 'A' + (rand() % 26);
 	}
 	pass[16] = '\0';
 
