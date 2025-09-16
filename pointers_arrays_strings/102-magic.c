@@ -2,15 +2,12 @@
 
 /**
 * main - Entry point
-*
 * Description: Creates an array and prints the value of that element.
-*
 * Return: Always 0 (Success)
 */
 int main(void)
 {
 	int a[5];
-
 	int *p;
 
 	a[2] = 1024;
