@@ -1,19 +1,19 @@
 #include "main.h"
 
 /**
-* main - Entry point
-*
-* Description: Creates an array, modifies its third element using a
-* pointer, and prints the value of that element using _putchar.
-*
-* Return: Always 0 (Success)
-*/
+ * main - Entry point
+ *
+ * Description: Creates an array, modifies its third element using a
+ * pointer, and prints the value of that element using _putchar.
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	int a[5];
 	int *p;
 
-	a[2] = 1234;
+	a[2] = 1024;
 	p = &a[2];
 
 	*p = 98;
