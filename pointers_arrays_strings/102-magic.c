@@ -3,8 +3,7 @@
 /**
  * main - Entry point
  *
- * Description: Creates an array, modifies its third element using a
- * pointer, and prints the value of that element using _putchar.
+ * Creates an array and prints the value of that element.
  *
  * Return: Always 0 (Success)
  */
