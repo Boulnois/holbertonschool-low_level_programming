@@ -12,14 +12,16 @@ void print_buffer(char *b, int size)
 
 	if (size <= 0)
 	{
-		_putchar('\n');
+		putchar('\n');
 		return;
 	}
 
 	for (i = 0; i < size; i += 10)
 	{
+		/* Print the offset in hex, 8 characters, zero-padded */
 		printf("%08x:", i);
 
+		/* Print hex values of up to 10 bytes */
 		for (j = 0; j < 10; j++)
 		{
 			if ((i + j) < size)
@@ -27,22 +29,20 @@ void print_buffer(char *b, int size)
 
 			else
 				printf("   ");
-
-			if (j % 2)
-				_putchar(' ');
 		}
 
-		_putchar(' ');
-
+		/* Print ASCII representation */
+		printf("  ");
 		for (j = 0; j < 10 && (i + j) < size; j++)
 		{
 			char c = b[i + j];
+
 			if (c >= 32 && c <= 126)
 				_putchar(c);
 			else
 				_putchar('.');
 		}
 
-		_putchar('\n');
+		putchar('\n');
 	}
 }
