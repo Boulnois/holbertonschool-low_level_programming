@@ -2,7 +2,8 @@
 
 /**
 * main - Entry point
-* Description: Creates an array and prints the value of that element.
+* Description: Creates an array and prints the value of the third element
+*              using a pointer.
 * Return: Always 0 (Success)
 */
 int main(void)
@@ -14,16 +15,8 @@ int main(void)
 	p = &a[2];
 
 	*p = 98;
-	_putchar('a');
-	_putchar('[');
-	_putchar('2');
-	_putchar(']');
-	_putchar(' ');
-	_putchar('=');
-	_putchar(' ');
-	_putchar((*p / 10) + '0');
-	_putchar((*p % 10) + '0');
-	_putchar('\n');
+
+	_putchar('a'); _putchar('['); _putchar('2'); _putchar(']'); _putchar(' '); _putchar('='); _putchar(' '); _putchar((*p / 10) + '0'); _putchar((*p % 10) + '0'); _putchar('\n');
 
 	return (0);
 }
