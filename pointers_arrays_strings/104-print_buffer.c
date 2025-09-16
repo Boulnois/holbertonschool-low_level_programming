@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
 * print_buffer - prints a buffer 10 bytes per line in hex and ASCII
@@ -12,28 +11,46 @@ void print_buffer(char *b, int size)
 
 	if (size <= 0)
 	{
-		putchar('\n');
+		_putchar('\n');
 		return;
 	}
 
 	for (i = 0; i < size; i += 10)
 	{
-		/* Print the offset in hex, 8 characters, zero-padded */
-		printf("%08x:", i);
+		/* Print offset in hex (8 chars) */
+		int tmp = i, div, digit;
 
-		/* Print hex values of up to 10 bytes */
+		char hex[] = "0123456789abcdef";
+
+		for (div = 7; div >= 0; div--)
+		{
+			digit = (tmp >> (div * 4)) & 0xF;
+			_putchar(hex[digit]);
+		}
+		_putchar(':');
+
+		/* Print hex bytes */
 		for (j = 0; j < 10; j++)
 		{
-			if ((i + j) < size)
-				printf(" %02x", (unsigned char)b[i + j]);
+			_putchar(' ');
+			if (i + j < size)
+			{
+				int val = (unsigned char)b[i + j];
 
+				_putchar(hex[val / 16]);
+				_putchar(hex[val % 16]);
+			}
 			else
-				printf("   ");
+			{
+				_putchar(' ');
+				_putchar(' ');
+			}
 		}
 
-		/* Print ASCII representation */
-		printf("  ");
-		for (j = 0; j < 10 && (i + j) < size; j++)
+		/* Print ASCII chars */
+		_putchar(' ');
+		_putchar(' ');
+		for (j = 0; j < 10 && i + j < size; j++)
 		{
 			char c = b[i + j];
 
@@ -42,7 +59,6 @@ void print_buffer(char *b, int size)
 			else
 				_putchar('.');
 		}
-
-		putchar('\n');
+		_putchar('\n');
 	}
 }
