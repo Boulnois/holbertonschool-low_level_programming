@@ -27,9 +27,12 @@ void print_buffer(char *b, int size)
 
 			else
 				printf("   ");
+
+			if (j % 2)
+				_putchar(' ');
 		}
 
-		printf("  ");
+		_putchar(' ');
 
 		for (j = 0; j < 10 && (i + j) < size; j++)
 		{
