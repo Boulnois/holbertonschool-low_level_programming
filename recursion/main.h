@@ -15,5 +15,6 @@ int is_palindrome(char *s);
 char to_lower(char c);
 char *find_end(char *s);
 int check_palindrome(char *start, char *end);
+int wildcmp(char *s1, char *s2);
 
 #endif
