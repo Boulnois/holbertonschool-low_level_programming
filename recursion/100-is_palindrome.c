@@ -23,7 +23,7 @@ char *find_end(char *s)
 {
 	if (*s == '\0')
 		return (s - 1);
-	return find_end(s + 1);
+	return (find_end(s + 1));
 }
 
 /**
@@ -39,15 +39,15 @@ int check_palindrome(char *start, char *end)
 		return (1);
 
 	if (*start == ' ')
-		return check_palindrome(start + 1, end);
+		return (check_palindrome(start + 1, end));
 
 	if (*end == ' ')
-		return check_palindrome(start, end - 1);
+		return (check_palindrome(start, end - 1));
 
 	if (to_lower(*start) != to_lower(*end))
 		return (0);
 
-	return check_palindrome(start + 1, end - 1);
+	return (check_palindrome(start + 1, end - 1));
 }
 
 /**
@@ -61,5 +61,5 @@ int is_palindrome(char *s)
 	if (!s || *s == '\0')
 		return (1);
 
-	return check_palindrome(s, find_end(s));
+	return (check_palindrome(s, find_end(s)));
 }
